@@ -1,5 +1,11 @@
+import ToDoData from "./components/ToDoData";
 import ToDoContent from "./components/todo/ToDoContent";
 import "./components/todo/todo.css";
+const data = {
+  taskone: "Sleeping",
+  tasktwo: "Learn React",
+  taskthree: "Eating hihi",
+};
 const App = () => {
   return (
     <>
@@ -12,6 +18,7 @@ const App = () => {
           style={{}}
           className="todolist-container-img"
         />
+        <ToDoData data={data} />
       </div>
     </>
   );

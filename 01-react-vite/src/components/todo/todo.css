@@ -35,3 +35,16 @@
 .todolist-container-content {
   margin-top: 40px;
 }
+
+.todolist-container-data {
+  text-align: left;
+  margin-left: 40%;
+  width: 400px;
+  border: 1px solid rgb(202, 199, 199);
+  margin-top: 20px;
+}
+
+.todolist-container-data p {
+  margin-left: 20px;
+  padding-bottom: 5px;
+}
