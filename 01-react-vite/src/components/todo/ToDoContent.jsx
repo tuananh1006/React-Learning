@@ -1,12 +1,18 @@
+import { useState } from "react";
+
 const ToDoContent = (props) => {
-  const { addNewToDo } = props;
-  const handleClick = () => {
-    console.log("I'm clicked");
+  const [valueInput, setValueInput] = useState("Tuan Anh");
+
+  const handleClick = (event) => {
+    alert(valueInput);
   };
 
   const handleOnChange = (event) => {
-    console.log(event.target.value);
+    setValueInput(event.target.value);
   };
+  //UseState Hook
+
+  // const valueInput="";
   return (
     <div className="todolist-container-content">
       <input
@@ -21,6 +27,7 @@ const ToDoContent = (props) => {
         value={"Add"}
         onClick={handleClick}
       />
+      <div>Value in input is:{valueInput}</div>
     </div>
   );
 };
