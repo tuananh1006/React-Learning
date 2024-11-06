@@ -1,16 +1,27 @@
+import { useState } from "react";
 import ToDoData from "./components/ToDoData";
 import ToDoContent from "./components/todo/ToDoContent";
 import "./components/todo/todo.css";
-const data = {
-  taskone: "Sleeping",
-  tasktwo: "Learn React",
-  taskthree: "Eating hihi",
-};
 
-const addNewToDo = (name) => {
-  alert(`Call ${name}`);
-};
+function randomIntFromInterval(min, max) {
+  // min and max included
+  return Math.floor(Math.random() * (max - min + 1) + min);
+}
+
 const App = () => {
+  const [toDoList, setToDoList] = useState([
+    { id: 1, name: "Sleeping" },
+    { id: 2, name: "Learn React" },
+  ]);
+
+  const addNewToDo = (name) => {
+    const new_todo = {
+      id: randomIntFromInterval(1, 1000),
+      name: name,
+    };
+    setToDoList([...toDoList, new_todo]);
+  };
+
   return (
     <>
       <div className="todolist-container">
@@ -22,7 +33,7 @@ const App = () => {
           style={{}}
           className="todolist-container-img"
         />
-        <ToDoData data={data} />
+        <ToDoData toDoList={toDoList} />
       </div>
     </>
   );

@@ -1,11 +1,11 @@
 const ToDoData = (props) => {
-  const { taskone, tasktwo, taskthree } = props.data;
   console.log(props);
+  const { toDoList } = props;
   return (
     <div className="todolist-container-data">
-      <p>{taskone}</p>
-      <p>{tasktwo}</p>
-      <p>{taskthree}</p>
+      {toDoList.map((item, index) => {
+        return <p>{item.name}</p>;
+      })}
     </div>
   );
 };
