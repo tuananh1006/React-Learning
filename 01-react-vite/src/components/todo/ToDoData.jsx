@@ -1,5 +1,5 @@
 const ToDoData = (props) => {
-  console.log(props);
+  const { deleteToDo } = props;
   const { toDoList } = props;
   return (
     <div className="todolist-container-data">
@@ -7,7 +7,7 @@ const ToDoData = (props) => {
         return (
           <div className="todolist-container-taskList" key={`${item.id}`}>
             <p>{item.name}</p>
-            <button>Delete</button>
+            <button onClick={() => deleteToDo(item.id)}>Delete</button>
           </div>
         );
       })}
