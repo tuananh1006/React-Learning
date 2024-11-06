@@ -1,5 +1,5 @@
 import { useState } from "react";
-import ToDoData from "./components/ToDoData";
+import ToDoData from "./components/todo/ToDoData";
 import ToDoContent from "./components/todo/ToDoContent";
 import "./components/todo/todo.css";
 

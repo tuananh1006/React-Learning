@@ -4,7 +4,12 @@ const ToDoData = (props) => {
   return (
     <div className="todolist-container-data">
       {toDoList.map((item, index) => {
-        return <p>{item.name}</p>;
+        return (
+          <div className="todolist-container-taskList">
+            <p>{item.name}</p>
+            <button>Delete</button>
+          </div>
+        );
       })}
     </div>
   );

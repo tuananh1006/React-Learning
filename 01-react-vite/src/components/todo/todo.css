@@ -48,3 +48,14 @@
   margin-left: 20px;
   padding-bottom: 5px;
 }
+
+.todolist-container-taskList {
+  display: flex;
+  justify-content: space-between;
+}
+
+.todolist-container-taskList button {
+  height: 20px;
+  transform: translateY(12px);
+  margin-right: 20px;
+}
