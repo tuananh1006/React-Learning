@@ -9,10 +9,7 @@ function randomIntFromInterval(min, max) {
 }
 
 const App = () => {
-  const [toDoList, setToDoList] = useState([
-    { id: 1, name: "Sleeping" },
-    { id: 2, name: "Learn React" },
-  ]);
+  const [toDoList, setToDoList] = useState([]);
 
   const addNewToDo = (name) => {
     const new_todo = {
@@ -27,13 +24,25 @@ const App = () => {
       <div className="todolist-container">
         <h1 className="todolist-container-title ">TodoList</h1>
         <ToDoContent addNewToDo={addNewToDo} />
-        <img
-          src="./src/assets/business-to-do-list-flat-icon-modern-style-vector.jpg"
-          alt="hok thay hinh"
-          style={{}}
-          className="todolist-container-img"
-        />
-        <ToDoData toDoList={toDoList} />
+        {toDoList.length === 0 ? (
+          <img
+            src="./src/assets/business-to-do-list-flat-icon-modern-style-vector.jpg"
+            alt="hok thay hinh"
+            style={{}}
+            className="todolist-container-img"
+          />
+        ) : (
+          <ToDoData toDoList={toDoList} />
+        )}
+        {/* {toDoList.length === 0 && (
+          <img
+            src="./src/assets/business-to-do-list-flat-icon-modern-style-vector.jpg"
+            alt="hok thay hinh"
+            style={{}}
+            className="todolist-container-img"
+          />
+        )}
+        {toDoList.length > 0 && <ToDoData toDoList={toDoList} />} */}
       </div>
     </>
   );
