@@ -16,9 +16,11 @@ const ToDoContent = (props) => {
   };
 
   const handleKeyDown = (event) => {
-    if (event.key === "Enter") {
-      addNewToDo(valueInput);
-      setValueInput("");
+    if (valueInput) {
+      if (event.key === "Enter") {
+        addNewToDo(valueInput);
+        setValueInput("");
+      }
     }
   };
 
