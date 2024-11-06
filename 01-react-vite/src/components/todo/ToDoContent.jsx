@@ -5,8 +5,10 @@ const ToDoContent = (props) => {
   const { addNewToDo } = props;
 
   const handleClick = () => {
-    addNewToDo(valueInput);
-    setValueInput("");
+    if (valueInput) {
+      addNewToDo(valueInput);
+      setValueInput("");
+    }
   };
 
   const handleOnChange = (event) => {
