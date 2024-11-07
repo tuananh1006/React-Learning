@@ -8,10 +8,12 @@ import Target from "./pages/target.jsx";
 import Plan from "./pages/plan.jsx";
 import "./styles/styles.css";
 import HomePageContent from "./components/homepage/homepage.jsx";
+import ErrorPage from "./pages/error.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
     element: <HomePage />,
+    errorElement: <ErrorPage />,
     children: [
       {
         index: true,
