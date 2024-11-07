@@ -1,5 +1,6 @@
 .todolist-container {
   text-align: center;
+  margin-top: 50px;
 }
 
 .todolist-container-title {
@@ -51,10 +52,12 @@
 .todolist-container-taskList {
   display: flex;
   justify-content: space-between;
+  padding-bottom: 20px;
+  padding-top: 20px;
 }
 
 .todolist-container-taskList button {
   height: 20px;
-  transform: translateY(12px);
   margin-right: 20px;
+  transform: translateY(-3px);
 }
