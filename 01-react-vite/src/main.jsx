@@ -6,6 +6,7 @@ import User from "./pages/user.jsx";
 import HomePage from "./pages/home.jsx";
 import Target from "./pages/target.jsx";
 import Plan from "./pages/plan.jsx";
+import "./styles/styles.css";
 const router = createBrowserRouter([
   {
     path: "/",
