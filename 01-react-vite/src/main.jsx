@@ -7,11 +7,16 @@ import HomePage from "./pages/home.jsx";
 import Target from "./pages/target.jsx";
 import Plan from "./pages/plan.jsx";
 import "./styles/styles.css";
+import HomePageContent from "./components/homepage/homepage.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
     element: <HomePage />,
     children: [
+      {
+        index: true,
+        element: <HomePageContent />,
+      },
       {
         path: "/target",
         element: <Target />,
