@@ -2,8 +2,6 @@ import { useState } from "react";
 import ToDoData from "./components/todo/ToDoData";
 import ToDoContent from "./components/todo/ToDoContent";
 import "./components/todo/todo.css";
-import Header from "./components/layout/header";
-import Footer from "./components/layout/footer";
 
 function randomIntFromInterval(min, max) {
   // min and max included
@@ -28,7 +26,6 @@ const App = () => {
 
   return (
     <>
-      <Header />
       <div className="todolist-container">
         <h1 className="todolist-container-title ">TodoList</h1>
         <ToDoContent addNewToDo={addNewToDo} />
@@ -52,7 +49,6 @@ const App = () => {
         )}
         {toDoList.length > 0 && <ToDoData toDoList={toDoList} />} */}
       </div>
-      <Footer />
     </>
   );
 };

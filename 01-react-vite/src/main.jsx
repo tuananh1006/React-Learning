@@ -11,22 +11,24 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <HomePage />,
+    children: [
+      {
+        path: "/target",
+        element: <Target />,
+      },
+      {
+        path: "/plan",
+        element: <Plan />,
+      },
+      {
+        path: "/user",
+        element: <User />,
+      },
+    ],
   },
   {
     path: "/login",
     element: <LoginPage />,
-  },
-  {
-    path: "/user",
-    element: <User />,
-  },
-  {
-    path: "/target",
-    element: <Target />,
-  },
-  {
-    path: "/plan",
-    element: <Plan />,
   },
 ]);
 
